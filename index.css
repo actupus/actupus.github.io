@@ -1,3 +1,4 @@
+/* Base layout */
 body {
   margin: 0;
   padding: 0;
@@ -10,15 +11,18 @@ body {
   font-family: sans-serif;
 }
 
+/* Container holding logo + text */
 .container {
-  position: relative; /* Needed for absolute positioning inside */
-  display: inline-block; /* Shrinkwrap to image size */
-  transform: translateY(-70px); /* move up 50px */
+  position: relative;
+  display: inline-block;
+  transform: translateY(-70px);
+  width: 90vw;
+  max-width: 600px; /* allow scaling on desktop */
 }
 
 /* Logo image */
 .centered-image {
-  width: 400px;
+  width: 100%;
   height: auto;
   display: block;
 }
@@ -26,14 +30,64 @@ body {
 /* Text overlay */
 .overlay-text {
   position: absolute;
-  top: 50%;   /* vertical center */
-  left: 50%;  /* horizontal center */
-  transform: translate(-50%, 350%); /* shift text exactly to center */
-  color: black; /* choose contrast color */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 380%);
+  color: black;
   font-size: 1.3rem;
   font-weight: bold;
   text-align: center;
-  pointer-events: none; /* so clicks pass through text */
+  pointer-events: none;
   user-select: none;
   white-space: nowrap;
+}
+
+/* Top navigation links */
+.top-links {
+  position: absolute;
+  top: 20px;
+  right: 360px; /* more elegant on desktop */
+  display: flex;
+  gap: 24px;
+}
+
+.top-links a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.top-links a:hover {
+  text-decoration: underline;
+}
+
+/* --- Responsive Enhancements --- */
+
+/* Medium to large screen (tablet/desktop) */
+@media (min-width: 768px) {
+  .overlay-text {
+    font-size: 1.8rem;
+  }
+
+  .top-links a {
+    font-size: 1.1rem;
+  }
+}
+
+/* Large desktop */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 700px;
+  }
+
+  .overlay-text {
+    font-size: 2rem;
+  }
+
+  .top-links {
+    top: 30px;
+    right: 60px;
+    gap: 32px;
+  }
 }
