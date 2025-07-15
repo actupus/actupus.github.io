@@ -13,7 +13,7 @@ body {
 .container {
   position: relative; /* Needed for absolute positioning inside */
   display: inline-block; /* Shrinkwrap to image size */
-  transform: translateY(-50px); /* move up 50px */
+  transform: translateY(-70px); /* move up 50px */
 }
 
 /* Logo image */
