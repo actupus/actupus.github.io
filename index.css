@@ -1,17 +1,38 @@
-/* Make the whole viewport black and use Flexbox to center content */
 body {
   margin: 0;
   padding: 0;
-  background-color: rgb(251,243,228);
+  background-color: rgb(251, 243, 228);
   height: 100vh;
   width: 100vw;
   display: flex;
-  justify-content: center;  /* Horizontal center */
-  align-items: center;      /* Vertical center */
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
 }
 
-/* Small image size */
+.container {
+  position: relative; /* Needed for absolute positioning inside */
+  display: inline-block; /* Shrinkwrap to image size */
+}
+
+/* Logo image */
 .centered-image {
-  width: 500px;
+  width: 400px;
   height: auto;
+  display: block;
+}
+
+/* Text overlay */
+.overlay-text {
+  position: absolute;
+  top: 50%;   /* vertical center */
+  left: 50%;  /* horizontal center */
+  transform: translate(-50%, 360%); /* shift text exactly to center */
+  color: black; /* choose contrast color */
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: center;
+  pointer-events: none; /* so clicks pass through text */
+  user-select: none;
+  white-space: nowrap;
 }
