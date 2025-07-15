@@ -13,6 +13,7 @@ body {
 .container {
   position: relative; /* Needed for absolute positioning inside */
   display: inline-block; /* Shrinkwrap to image size */
+  transform: translateY(-50px); /* move up 50px */
 }
 
 /* Logo image */
@@ -27,7 +28,7 @@ body {
   position: absolute;
   top: 50%;   /* vertical center */
   left: 50%;  /* horizontal center */
-  transform: translate(-50%, 360%); /* shift text exactly to center */
+  transform: translate(-50%, 350%); /* shift text exactly to center */
   color: black; /* choose contrast color */
   font-size: 1.3rem;
   font-weight: bold;
