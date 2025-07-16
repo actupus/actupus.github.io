@@ -33,8 +33,8 @@ body {
 
 .tagline {
   margin-top: 0rem;
-  font-size: 4vw;
-  max-font-size: 2rem;
+  font-size: 1.5rem;
+  /*max-font-size: 2rem;*/
   font-weight: bold;
   color: black;
   white-space: nowrap;
