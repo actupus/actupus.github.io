@@ -2,19 +2,24 @@ body {
   margin: 0;
   padding: 0;
   background-color: rgb(251, 243, 228);
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-family: sans-serif;
 }
 
+/* Smooth scroll and snap settings */
+html, body {
+  scroll-behavior: smooth;
+}
+
+.sections {
+  scroll-snap-type: y mandatory;
+}
+
+/* Center branding logo + text */
 .container {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  transform: translateY(-50px); /* move content slightly higher */
+  padding-top: 100px;
 }
 
 .branding {
@@ -32,24 +37,21 @@ body {
 }
 
 .tagline {
-  margin-top: 0rem;
+  margin-top: 1rem;
   font-size: 1.5rem;
-  /*max-font-size: 2rem;*/
   font-weight: bold;
   color: black;
-  white-space: nowrap;
-  /*transform: translateY(-20px);*/
 }
 
-/* Top navigation links */
+/* Navigation at the top */
 .top-links {
-  position: fixed;              /* stays at top while scrolling */
+  position: fixed;
   top: 20px;
-  left: 50%;                    /* move to center of screen */
-  transform: translateX(-50%);  /* pull it back half its width */
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   gap: 24px;
-  z-index: 10;                  /* keep above other content */
+  z-index: 10;
 }
 
 .top-links a {
@@ -62,3 +64,25 @@ body {
 .top-links a:hover {
   text-decoration: underline;
 }
+
+/* Section styles */
+.section {
+  width: 100%;
+  min-height: 100vh;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  scroll-snap-align: start;
+  box-sizing: border-box;
+}
+
+/* Optional background colors */
+/*
+#package  { background-color: #fcefe3; }
+#tutorial { background-color: #f3e9ff; }
+#about    { background-color: #e5f8f1; }
+#contact  { background-color: #fff7dc; }
+*/

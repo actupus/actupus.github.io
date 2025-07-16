@@ -5,19 +5,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Actupus</title>
   <link rel="stylesheet" href="index.css" />
+
+  <!-- Include jQuery for smooth scroll -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="index.js" defer></script>
 </head>
 <body>
-  <div class="container">
-  <div class="branding">
-    <img src="images/actupus_light_small.jpg" alt="Actupus Logo" class="logo">
-    <p class="tagline">Modern open source actuary toolkit.</p>
-  </div>
-</div>
+  <!-- Top Navigation -->
   <div class="top-links">
-    <a href="#about">Package</a>
-    <a href="#about">Tutorial</a>
+    <a href="#package">Package</a>
+    <a href="#tutorial">Tutorial</a>
     <a href="#about">About</a>
     <a href="#contact">Author</a>
   </div>
+
+  <!-- Main Branding -->
+  <div class="container">
+    <div class="branding">
+      <img src="images/actupus_light_small.jpg" alt="Actupus Logo" class="logo" />
+      <p class="tagline">Modern open source actuary toolkit.</p>
+    </div>
+  </div>
+
+  <!-- Sections (appear below branding) -->
+  <main class="sections">
+    <section id="package" class="section">
+      <h2>Package</h2>
+      <p>Details about the Actupus package go here.</p>
+    </section>
+
+    <section id="tutorial" class="section">
+      <h2>Tutorial</h2>
+      <p>Learn how to use Actupus with this step-by-step guide.</p>
+    </section>
+
+    <section id="about" class="section">
+      <h2>About</h2>
+      <p>Actupus is a modern open-source toolkit designed for actuaries and data engineers.</p>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Author</h2>
+      <p>Created by [Your Name]. Contact: your@email.com</p>
+    </section>
+  </main>
 </body>
 </html>
